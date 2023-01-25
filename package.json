@@ -1,0 +1,28 @@
+{
+  "name": "turbo-mui-typescript-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "web:storybook": "turbo run storybook --filter=web",
+    "web:build-storybook": "turbo run build-storybook --filter=web",
+    "web:generate": "yarn plop --plopfile generators/web-plopfile.js",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "plop": "^3.1.1",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "dependencies": {}
+}

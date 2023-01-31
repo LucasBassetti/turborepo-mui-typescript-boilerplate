@@ -1,4 +1,5 @@
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
+
 import {{pascalCase name}}, { {{pascalCase name}}Props } from '.';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   args: {},
 } as Meta;
 
-export const Default: Story<{{pascalCase name}}Props> = (args) => <{{pascalCase name}} {...args} />;
+export const Default: StoryFn<{{pascalCase name}}Props> = (args) => <{{pascalCase name}} {...args} />;

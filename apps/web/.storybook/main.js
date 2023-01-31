@@ -2,6 +2,13 @@ const path = require('path');
 const toPath = (filePath) => path.join(process.cwd(), filePath);
 
 module.exports = {
+  framework: {
+    name: '@storybook/nextjs',
+    options: {
+      fastRefresh: true,
+      nextConfigPath: path.resolve(__dirname, '../next.config.js')
+    }
+  },
   stories: ['../src/components/**/stories.tsx'],
   addons: ['@storybook/addon-essentials', 'storybook-addon-material-ui5'],
   babel: async (options) => ({

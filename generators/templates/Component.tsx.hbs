@@ -1,13 +1,11 @@
-import * as S from './styles'
+import * as S from './styles';
 
 export type {{pascalCase name}}Props = {
   //
 };
 
-const {{pascalCase name}} = () => (
-  <S.Wrapper>
-    {{pascalCase name}}
-  </S.Wrapper>
-)
+const {{pascalCase name}} = () => {
+  return <S.Component data-testid="{{pascalCase name}}">{{pascalCase name}}</S.Component>;
+};
 
-export default {{pascalCase name}}
+export default {{pascalCase name}};
